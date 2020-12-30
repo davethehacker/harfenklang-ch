@@ -6,3 +6,345 @@ Author: David Schmid
 Author URI: https://hexcode.ch
 Version: 0.1
 */
+@import url("https://fonts.googleapis.com/css2?family=Sacramento&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400&display=swap");
+/*
+/// Applies padding to an element, taking the current element-margin value into account.
+*/
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body {
+  color: white;
+  background-color: #731D36;
+  font-family: "Lato", sans-serif;
+}
+
+a {
+  color: white;
+}
+
+h1 {
+  font-family: "Sacramento", cursive;
+}
+
+/* Banner */
+#banner {
+  height: 40em;
+  margin-top: 4em;
+  width: 100%;
+  align-items: center;
+  background-position-x: center;
+  background-position-y: bottom;
+  background-repeat: no-repeat;
+  background-size: cover;
+  /*@include vendor('align-items', 'center');
+  		@include vendor('display', 'flex');
+  		//@include padding(4em, 0, (2em, 0, 0, 0));
+  		background-attachment: fixed;
+  		background-position: center;
+  		background-repeat: no-repeat;
+  		background-size: cover;
+  		border-bottom: 0 !important;
+  		cursor: default;
+  		height: 60vh;
+  		margin-bottom: -3.25em;
+  		max-height: 32em;
+  		min-height: 22em;
+  		position: relative;
+  		top: -3.25em;
+
+  		&:after {
+  			//@include vendor('transition', 'opacity _duration(banner) ease');
+  			//@include vendor('transition-delay', '0.75s');
+  			//@include vendor('pointer-events', 'none');
+  			//background-color: _palette(bg);
+  			content: '';
+  			display: block;
+  			height: 100%;
+  			left: 0;
+  			opacity: 0.85;
+  			position: absolute;
+  			top: 0;
+  			width: 100%;
+  			z-index: 1;
+  		}
+
+  		h1 {
+  			font-size: 3.25em;
+  		}
+
+  		> .inner {
+  			@include vendor('transition', (
+  				'opacity 1.5s ease',
+  				'transform 0.5s ease-out',
+  				'filter 0.5s ease',
+  				'-webkit-filter 0.5s ease'
+  			));
+  			padding: 0 !important;
+  			position: relative;
+  			z-index: 2;
+
+  			.image {
+  				display: none;
+  			}
+
+  			header {
+  				width: auto;
+
+  				> :first-child {
+  					width: auto;
+
+  					&:after {
+  						max-width: 100%;
+  					}
+  				}
+  			}
+
+  			.content {
+  				@include vendor('display', 'flex');
+  				@include vendor('align-items', 'center');
+  				margin: 0 0 _size(element-margin) 0;
+
+  				> * {
+  					margin-right: 1.5em;
+  					margin-bottom: 0;
+  				}
+
+  				> :last-child {
+  					margin-right: 0;
+  				}
+
+  				p {
+  					font-size: 0.7em;
+  					font-weight: _font(weight-bold);
+  					letter-spacing: _font(letter-spacing-alt);
+  					text-transform: uppercase;
+  				}
+  			}
+  		}
+
+  		&.major {
+  			height: 75vh;
+  			min-height: 30em;
+  			max-height: 50em;
+
+  			&.alt {
+  				opacity: 0.75;
+  			}
+  		}
+
+
+  /*
+  		@include breakpoint('<=large') {
+  			background-attachment: scroll;
+  		}
+
+  		@include breakpoint('<=small') {
+  			@include padding(3em, 0, (2em, 0, 0, 0));
+  			height: auto;
+  			margin-bottom: -2.75em;
+  			max-height: none;
+  			min-height: 0;
+  			top: -2.75em;
+
+  			h1 {
+  				font-size: 2em;
+  			}
+
+  			> .inner {
+  				.content {
+  					display: block;
+
+  					> * {
+  						margin-right: 0;
+  						margin-bottom: _size(element-margin);
+  					}
+  				}
+  			}
+
+  			&.major {
+  				height: auto;
+  				min-height: 0;
+  				max-height: none;
+  			}
+  		}
+
+  		@include breakpoint('<=xsmall') {
+  			@include padding(4em, 0, (2em, 0, 0, 0));
+
+  			> .inner {
+  				.content {
+  					p {
+  						br {
+  							display: none;
+  						}
+  					}
+  				}
+  			}
+
+  			&.major {
+  				@include padding(6em, 0, (2em, 0, 0, 0));
+  			}
+  		} */
+}
+#banner .inner {
+  padding-top: 16em;
+  padding-left: 10vw;
+}
+#banner .inner h1 {
+  font-size: 2.6em;
+  max-width: 60vw;
+  transform: rotate(-20deg);
+}
+
+#main {
+  margin-left: 4em;
+  margin-right: 4em;
+  margin-top: 2em;
+}
+
+/* Menu */
+#menu {
+  /*@include vendor('transition', (
+  	'transform _duration(menu) ease',
+  	'opacity _duration(menu) ease',
+  	'visibility _duration(menu)'
+  ));*/
+  -moz-align-items: center;
+  -ms-align-items: center;
+  align-items: center;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: flex;
+  -moz-justify-content: center;
+  -ms-justify-content: center;
+  justify-content: center;
+  pointer-events: none;
+  background: rgba(115, 29, 54, 0.9);
+  box-shadow: none;
+  height: 100%;
+  left: 0;
+  opacity: 0;
+  overflow: hidden;
+  padding: 3em 2em;
+  position: fixed;
+  top: 0;
+  visibility: hidden;
+  width: 100%;
+  z-index: _misc(z-index-base)2;
+}
+#menu .inner {
+  /*@include vendor('transition', (
+  	'transform _duration(menu) ease-out',
+  	'opacity _duration(menu) ease',
+  	'visibility _duration(menu)'
+  ));*/
+  transform: rotateX(20deg);
+  -webkit-overflow-scrolling: touch;
+  max-width: 100%;
+  max-height: 100vh;
+  opacity: 0;
+  overflow: auto;
+  text-align: center;
+  visibility: hidden;
+  width: 18em;
+}
+#menu .inner > :first-child {
+  margin-top: 3em;
+}
+#menu .inner > :last-child {
+  margin-bottom: 3em;
+}
+#menu ul {
+  margin: 0 0 3em 0;
+}
+#menu ul.links {
+  list-style: none;
+  padding: 0;
+}
+#menu ul.links > li {
+  padding: 0;
+}
+#menu ul.links > li > a:not(.button) {
+  border: 0;
+  display: block;
+  font-size: 0.8em;
+  font-weight: 300;
+  letter-spacing: unset;
+  line-height: 4em;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+#menu ul.links > li > .button {
+  display: block;
+  margin: 0.5em 0 0 0;
+}
+#menu ul.links > li:first-child > a:not(.button) {
+  border-top: 0 !important;
+}
+#menu .close {
+  cursor: pointer;
+  display: block;
+  height: 4em;
+  overflow: hidden;
+  position: absolute;
+  right: 0;
+  text-align: right;
+  text-indent: 8em;
+  top: 0;
+  white-space: nowrap;
+  width: 8em;
+}
+#menu .close:before, #menu .close:after {
+  background-position: center;
+  background-repeat: no-repeat;
+  content: "";
+  display: block;
+  height: 4em;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 4em;
+}
+#menu .close:before {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='20px' height='20px' viewBox='0 0 20 20' zoomAndPan='disable'%3E%3Cstyle%3Eline %7B stroke: white%3B stroke-width: 2%3B %7D%3C/style%3E%3Cline x1='0' y1='0' x2='20' y2='20' /%3E%3Cline x1='20' y1='0' x2='0' y2='20' /%3E%3C/svg%3E");
+}
+#menu .close:after {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='20px' height='20px' viewBox='0 0 20 20' zoomAndPan='disable'%3E%3Cstyle%3Eline %7B stroke: %2380203C%3B stroke-width: 2%3B %7D%3C/style%3E%3Cline x1='0' y1='0' x2='20' y2='20' /%3E%3Cline x1='20' y1='0' x2='0' y2='20' /%3E%3C/svg%3E");
+  opacity: 0;
+}
+#menu .close:hover:after, #menu .close:active:after {
+  opacity: 1;
+}
+
+body.is-menu-visible #wrapper {
+  -moz-filter: blur(0.5em);
+  -ms-filter: blur(0.5em);
+  filter: blur(0.5em);
+}
+body.is-menu-visible #menu {
+  pointer-events: auto;
+  opacity: 1;
+  visibility: visible;
+}
+body.is-menu-visible #menu .inner {
+  transform: none;
+  opacity: 1;
+  visibility: visible;
+}
+/*# sourceMappingURL=style.css.map */

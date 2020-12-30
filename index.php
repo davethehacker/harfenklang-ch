@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>" media="screen" />
     
 
-    <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/assets/css/main.css" />
+    <!--- <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/assets/css/main.css" /> ---!>
 
     <script src="<?php echo get_template_directory_uri(); ?>/script.js" type="text/javascript"></script>
 
@@ -29,7 +29,7 @@
             <header id="header">
                 <a href="index.html" class="logo"><strong>Forty</strong> <span>by Pixelarity</span></a>
                 <nav>
-                    <a href="#menu">Menu</a>
+                    <a href="#menu"></a>
                 </nav>
             </header>
 
@@ -47,7 +47,7 @@
             <section id="banner" class="major" style="background-position: center 0px; background-image: url(<?php echo get_the_post_thumbnail_url();?>)">
                 <div class="inner">
                     <header class="major">
-                        <h1><br><br>Zitat hier</h1>
+                        <h1>Es beglückt mich, den Menschen meine Freude an der Musik weiterzugeben.</h1>
                     </header>
 							
                 </div>
@@ -75,26 +75,7 @@
             <section id="contact">
                 <div class="inner">
                     <section>
-                        <form method="post" action="#">
-                            <div class="fields">
-                                <div class="field half">
-                                    <label for="name">Name</label>
-                                    <input type="text" name="name" id="name" />
-                                </div>
-                                <div class="field half">
-                                    <label for="email">Email</label>
-                                    <input type="text" name="email" id="email" />
-                                </div>
-                                <div class="field">
-                                    <label for="message">Message</label>
-                                    <textarea name="message" id="message" rows="6"></textarea>
-                                </div>
-                            </div>
-                            <ul class="actions">
-                                <li><input type="submit" value="Send Message" class="primary" /></li>
-                                <li><input type="reset" value="Clear" /></li>
-                            </ul>
-                        </form>
+                        
                     </section>
                     <section class="split">
                         <section>
@@ -127,13 +108,7 @@
         <!-- Footer -->
             <footer id="footer">
                 <div class="inner">
-                    <ul class="icons">
-                        <li><a href="#" class="icon brands alt fa-twitter"><span class="label">Twitter</span></a></li>
-                        <li><a href="#" class="icon brands alt fa-facebook-f"><span class="label">Facebook</span></a></li>
-                        <li><a href="#" class="icon brands alt fa-instagram"><span class="label">Instagram</span></a></li>
-                        <li><a href="#" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
-                        <li><a href="#" class="icon brands alt fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
-                    </ul>
+                    
                     <ul class="copyright">
                         <li>&copy; Untitled</li>
                     </ul>
@@ -146,8 +121,8 @@
     <?php wp_footer(); ?>
     <!-- Scripts -->
 			<script src="<?php echo get_template_directory_uri(); ?>/assets/js/jquery.min.js"></script>
-			<script src="<?php echo get_template_directory_uri(); ?>/assets/js/jquery.scrolly.min.js"></script>
-			<script src="<?php echo get_template_directory_uri(); ?>/assets/js/jquery.scrollex.min.js"></script>
+			<!--<script src="<?php echo get_template_directory_uri(); ?>/assets/js/jquery.scrolly.min.js"></script>-->
+			<!--<script src="<?php echo get_template_directory_uri(); ?>/assets/js/jquery.scrollex.min.js"></script>-->
 			<script src="<?php echo get_template_directory_uri(); ?>/assets/js/browser.min.js"></script>
 			<script src="<?php echo get_template_directory_uri(); ?>/assets/js/breakpoints.min.js"></script>
 			<script src="<?php echo get_template_directory_uri(); ?>/assets/js/util.js"></script>

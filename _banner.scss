@@ -8,24 +8,27 @@
 
 	#banner {
 		height: 10*$height-unit;
+		max-height: 70vh;
 		margin-top: $height-unit;
 		width: 100%;
 		align-items: center;
 		//background-attachment: fixed;
 		//background-position: center;
 		background-position-x: center;
-		background-position-y: bottom;
+		background-position-y: -$height-unit;
 		background-repeat: no-repeat;
 		background-size: cover;
 
 		.inner{
-			padding-top: 4*$height-unit;
-			padding-left: 10vw;
+			//padding-top: 4*$height-unit;
+			padding-top: 18vh;
+			padding-left: 1*$height-unit;
+			//padding-left: 10vw;
 			h1{
 			font-size: 2.6em;
 			max-width: 60vw;
 			
-			transform: rotate(-20deg);
+			transform: rotate(-15deg);
 			}
 		}
 

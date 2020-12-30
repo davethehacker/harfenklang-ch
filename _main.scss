@@ -1,5 +1,23 @@
 #main{
-    margin-left: $height-unit;
-    margin-right: $height-unit;
+    margin-left: 7vw;
+    margin-right: 7vw;
     margin-top: 0.5*$height-unit;
+    max-width: 22*$height-unit;
+
+    h1{
+        font-size: 3.5em;
+    }
+    p{
+        font-size: 1.2em;
+        font-weight: 300;
+        line-height: 1.5em;
+        padding-bottom: 1em;
+        max-width: 15*$height-unit;
+    }
+    .wp-block-column{
+        max-width: 15*$height-unit;
+    }
+    img{
+        height: auto;
+    }
 }

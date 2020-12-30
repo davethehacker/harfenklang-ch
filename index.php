@@ -44,7 +44,7 @@
             </nav>
 
         <?php if(have_posts()): while(have_posts()): the_post(); ?>
-            <section id="banner" class="major" style="background-position: center 0px; background-image: url(<?php echo get_the_post_thumbnail_url();?>)">
+            <section id="banner" class="major" style="background-image: url(<?php echo get_the_post_thumbnail_url();?>)">
                 <div class="inner">
                     <header class="major">
                         <h1>Es beglückt mich, den Menschen meine Freude an der Musik weiterzugeben.</h1>
@@ -63,7 +63,6 @@
                             <header class="major">
                                 <h1><?php the_title()?></h1>
                             </header>
-                            <span class="image main"><img src="images/pic11.jpg" alt="" /></span>
                             <?php the_content()?>
                         </div>
                     

@@ -7,15 +7,15 @@
 /* Banner */
 
 	#banner {
-		height: 10*$height-unit;
+		height: 11*$height-unit;
 		max-height: 70vh;
 		margin-top: $height-unit;
 		width: 100%;
 		align-items: center;
 		//background-attachment: fixed;
-		//background-position: center;
+		background-position: center;
 		background-position-x: center;
-		background-position-y: -$height-unit;
+		//background-position-y: $height-unit;
 		background-repeat: no-repeat;
 		background-size: cover;
 

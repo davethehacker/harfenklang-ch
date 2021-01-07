@@ -24,7 +24,7 @@
 
     <!-- Header -->
         <header id="header">
-            <a href="index.html" class="logo"><strong>Forty</strong> <span>by Pixelarity</span></a>
+            <a href="/" class="logo"><img src="<?php echo(get_template_directory_uri())?>/Unterschrift-Eliane-Koradi-temp-white.png"></img></a>
             <nav>
                 <a href="#menu"></a>
             </nav>

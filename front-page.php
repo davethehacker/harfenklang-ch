@@ -6,14 +6,14 @@
     <section id="banner" class="major" style="background-image: url(<?php echo get_the_post_thumbnail_url();?>)">
         <div class="inner">
             <header class="major">
-                <h1>Homepage</h1>
+                <h1>Es beglückt mich, den Menschen meine Freude an der Musik weiterzugeben.</h1>
             </header>
                     
         </div>
     </section>
 <?php endwhile; endif;?>
 <!-- Main -->
-    <div id="main" class="alt">
+    <div id="front-page" class="alt">
 
         <!-- Tiles -->
         <section id="one" class="tiles">

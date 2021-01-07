@@ -48,7 +48,7 @@ h1 {
   box-shadow: 0 0 0.25em 0 rgba(0, 0, 0, 0.15);
   cursor: default;
   font-weight: 600;
-  height: 4rem;
+  height: 6rem;
   left: 0;
   letter-spacing: 0.25em;
   line-height: 3.25em;
@@ -58,6 +58,11 @@ h1 {
   top: 0;
   width: 100%;
   z-index: 10000;
+}
+#header > a > img {
+  margin-top: 1rem;
+  margin-bottom: auto;
+  margin-left: 1rem;
 }
 #header nav {
   display: flex;
@@ -113,13 +118,13 @@ h1 {
 
 /* Banner */
 #banner {
-  height: 40rem;
+  height: 66rem;
   max-height: 70vh;
-  margin-top: 4rem;
+  margin-top: 6rem;
   width: 100%;
   align-items: center;
+  background-position: center;
   background-position-x: center;
-  background-position-y: -4rem;
   background-repeat: no-repeat;
   background-size: cover;
   /*@include vendor('align-items', 'center');
@@ -274,7 +279,7 @@ h1 {
 }
 #banner .inner {
   padding-top: 18vh;
-  padding-left: 4rem;
+  padding-left: 6rem;
 }
 #banner .inner h1 {
   font-size: 2.6em;
@@ -285,8 +290,8 @@ h1 {
 #main {
   margin-left: 7vw;
   margin-right: 7vw;
-  margin-top: 2rem;
-  max-width: 88rem;
+  margin-top: 3rem;
+  max-width: 132rem;
 }
 #main h1 {
   font-size: 3.5em;
@@ -296,10 +301,10 @@ h1 {
   font-weight: 300;
   line-height: 1.5em;
   padding-bottom: 1em;
-  max-width: 60rem;
+  max-width: 90rem;
 }
 #main .wp-block-column {
-  max-width: 60rem;
+  max-width: 90rem;
 }
 #main img {
   height: auto;
@@ -340,15 +345,7 @@ h1 {
   		}
   	}
   }
-
-  @include breakpoint('<=xsmall') {
-  	display: block;
-
-  	article {
-  		height: 20em;
-  		width: 100% !important;
-  	}
-  } */
+  */
 }
 .tiles + * {
   border-top: 0 !important;
@@ -365,22 +362,27 @@ h1 {
   background-repeat: no-repeat;
   background-size: cover;
   cursor: default;
-  height: 40vh;
+  height: 28vw;
   max-height: 40em;
   min-height: 23em;
   overflow: hidden;
   position: relative;
-  width: 40%;
+  width: 44%;
 }
 .tiles article .image {
   display: none;
 }
 .tiles article header {
   position: relative;
+  margin: auto;
   z-index: 3;
 }
 .tiles article h3 {
-  font-size: 1.75em;
+  font-size: 5rem;
+  font-family: "Sacramento", cursive;
+}
+.tiles article h3 a {
+  text-decoration: none;
 }
 .tiles article h3 a:hover {
   color: inherit !important;
@@ -428,25 +430,34 @@ h1 {
   opacity: 0;
 }
 .tiles article:nth-child(4n-1), .tiles article:nth-child(4n-2) {
-  width: 60%;
+  width: 56%;
 }
 .tiles article:nth-child(6n-5):before {
-  background-color: #c0d300;
+  background-color: #58B19F;
 }
 .tiles article:nth-child(6n-4):before {
-  background-color: _palette(accent2);
+  background-color: #FFB429;
 }
 .tiles article:nth-child(6n-3):before {
-  background-color: _palette(accent3);
+  background-color: #FEA47F;
 }
 .tiles article:nth-child(6n-2):before {
-  background-color: _palette(accent4);
+  background-color: #57D6F6;
 }
 .tiles article:nth-child(6n-1):before {
-  background-color: _palette(accent5);
+  background-color: #7F5996;
 }
 .tiles article:nth-child(6n):before {
-  background-color: _palette(accent6);
+  background-color: #77A653;
+}
+@media (max-width: 599px) {
+  .tiles {
+    display: block;
+  }
+  .tiles article {
+    height: 20em;
+    width: 100% !important;
+  }
 }
 
 /* Menu */

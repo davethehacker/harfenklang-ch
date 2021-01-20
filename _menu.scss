@@ -12,6 +12,7 @@
 			'opacity #{_duration(menu)} ease',
 			'visibility #{_duration(menu)}'
 		));*/
+		transition: opacity 0.5s ease;
 		@include vendor('align-items', 'center');
 		@include vendor('display', 'flex');
 		@include vendor('justify-content', 'center');
@@ -68,10 +69,10 @@
 						border: 0;
 						//border-top: solid 1px _palette(border);
 						display: block;
-						font-size: 0.8em;
+						font-size: 1.5rem;
 						font-weight: 300;
 						letter-spacing: unset;
-						line-height: 4em;
+						line-height: 3em;
 						text-decoration: none;
 						text-transform: uppercase;
 					}
@@ -115,11 +116,11 @@
 				background-repeat: no-repeat;
 				content: '';
 				display: block;
-				height: 4em;
+				height: $height-unit;
 				position: absolute;
 				right: 0;
 				top: 0;
-				width: 4em;
+				width: $height-unit;
 			}
 
 			&:before {

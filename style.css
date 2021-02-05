@@ -11,6 +11,12 @@ Version: 0.1
 /*
 /// Applies padding to an element, taking the current element-margin value into account.
 */
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
   margin: 0;
   padding: 0;
@@ -36,10 +42,42 @@ body {
 
 a {
   color: white;
+  text-decoration: none;
 }
 
 h1 {
   font-family: "Sacramento", cursive;
+}
+
+h2 {
+  font-size: 100%;
+}
+
+#main .agenda-title {
+  display: inline;
+  float: left;
+}
+#main .archive-link {
+  font-size: 1.5em;
+  font-weight: 300;
+  float: right;
+}
+#main .event-wrapper {
+  font-size: 1.2em;
+  font-weight: 300;
+  line-height: 1.5em;
+  padding-bottom: 1em;
+  display: block;
+}
+#main .event-wrapper .date-time-block {
+  display: inline-block;
+  padding-right: 1rem;
+}
+#main .event-wrapper .title-location-block {
+  display: inline-block;
+}
+#main .event-wrapper .title-location-block .event-title {
+  font-weight: 400;
 }
 
 #header {

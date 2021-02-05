@@ -91,7 +91,104 @@
     function remove_draft_widget(){
         remove_meta_box( 'dashboard_quick_press', 'dashboard', 'side' );
     }
-
     // End remove post type
+
+
+
+    function agenda_archive_shortcode() { 
+        
+        $args = array(
+            'post_type' => 'agenda',
+            'posts_per_page' => 100,
+            'orderby' => 'date',
+            'order' => 'ASC',
+            'post_status' => 'archive'
+           );
+        $custom_query = new WP_Query($args); 
+        $message = '';
+        if ($custom_query->have_posts()) : while($custom_query->have_posts()) : $custom_query->the_post();
+
+            $date_string = get_field('date');
+            $date = DateTime::createFromFormat('Ymd', $date_string);
+
+            $message .= '<a href="' . get_permalink() .'" class="event-wrapper">';
+            $message .= '<div class="date-time-block">';
+            $message .= '<div class="event-date">';
+            $message .= $date->format('d.m.Y');
+            $message .= '</div>';
+            $message .= '<div class="event-time">' . get_field('time') . '</div>';
+            $message .= '</div>';
+            $message .= '<div class="title-location-block">';
+            $message .= '<div class="event-title" itemprop="name">';
+            $message .= get_the_title();
+            $message .= '</div>';
+            $message .= '<div class="event-venue">';
+            $message .= '<span>' . get_field('location') . '</span>';
+            $message .= '</div></div>';
+            $message .= '</a>';
+        endwhile; else : 
+            return;
+        endif; 
+        wp_reset_postdata(); 
+         
+        // Output needs to be return
+        return $message;
+        } 
+        // register shortcode
+        add_shortcode('agenda_archive', 'agenda_archive_shortcode'); 
+
+
+    function agenda_current_shortcode() { 
+    
+        $args = array(
+            'post_type' => 'agenda',
+            'posts_per_page' => 100,
+            'orderby' => 'date',
+            'order' => 'ASC',
+            'post_status' => 'published'
+            );
+        $custom_query = new WP_Query($args); 
+        $message = '';
+        if ($custom_query->have_posts()) : while($custom_query->have_posts()) : $custom_query->the_post();
+            $postid = get_the_id();
+            // error here, everything gets archived
+            if(date('Ymd', time()) > $post->date){
+                wp_update_post(array(
+                    'ID'    =>  $postid,
+                    'post_status'   =>  'archive'
+                    ));
+                //echo "<!-- archived --->";
+                continue;
+            }
+            // Load field value.
+            $date_string = get_field('date');
+            // Create DateTime object from value (formats must match).
+            $date = DateTime::createFromFormat('Ymd', $date_string);
+
+            $message .= '<a href="' . get_permalink() .'" class="event-wrapper" itemscope itemtype="https://schema.org/Event">';
+            $message .= '<div class="date-time-block">';
+            $message .= '<div class="event-date" itemprop="startDate" content="' . $date->format('Y-m-d') . 'T'. get_field('time') . '">';
+            $message .= $date->format('d.m.Y');
+            $message .= '</div>';
+            $message .= '<div class="event-time">' . get_field('time') . '</div>';
+            $message .= '</div>';
+            $message .= '<div class="title-location-block">';
+            $message .= '<div class="event-title" itemprop="name">';
+            $message .= get_the_title();
+            $message .= '</div>';
+            $message .= '<div class="event-venue" itemprop="location" itemscope itemtype="https://schema.org/Place">';
+            $message .= '<span itemprop="name">' . get_field('location') . '</span>';
+            $message .= '</div></div>';
+            $message .= '</a>';
+        endwhile; else : 
+            return;
+        endif; 
+        wp_reset_postdata(); 
+            
+        // Output needs to be return
+        return $message;
+        } 
+        // register shortcode
+        //add_shortcode('agenda', 'agenda_current_shortcode'); 
 ?>
 

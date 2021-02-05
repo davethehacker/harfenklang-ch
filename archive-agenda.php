@@ -15,6 +15,16 @@
 
         <?php if(have_posts()): while(have_posts()): the_post(); ?>
         <?php 
+
+        $postid = get_the_id();
+        if(date('Ymd', time()) > $post->date){
+            wp_update_post(array(
+                'ID'    =>  $postid,
+                'post_status'   =>  'archive'
+                ));
+            echo "<!-- archived --->";
+            continue;
+        }
         // Load field value.
         $date_string = get_field('date');
         // Create DateTime object from value (formats must match).

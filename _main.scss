@@ -4,9 +4,13 @@
     margin-top: 0.5*$height-unit;
     max-width: 22*$height-unit;
 
-    h1{
-        font-size: 3.5em;
+    header{
+        margin-bottom: 1em;
+        h1{
+            //underline
+        }
     }
+
     p{
         font-size: 1.2em;
         font-weight: 300;

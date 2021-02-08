@@ -151,8 +151,14 @@
         $message = '';
         if ($custom_query->have_posts()) : while($custom_query->have_posts()) : $custom_query->the_post();
             $postid = get_the_id();
+
+            // Load field value.
+            $date_string = get_field('date');
+            // Create DateTime object from value (formats must match).
+            $date = DateTime::createFromFormat('Ymd', $date_string);
+
             // error here, everything gets archived
-            if(date('Ymd', time()) > $post->date){
+            if(date('Ymd', time()) > $date_string){
                 wp_update_post(array(
                     'ID'    =>  $postid,
                     'post_status'   =>  'archive'
@@ -160,10 +166,6 @@
                 //echo "<!-- archived --->";
                 continue;
             }
-            // Load field value.
-            $date_string = get_field('date');
-            // Create DateTime object from value (formats must match).
-            $date = DateTime::createFromFormat('Ymd', $date_string);
 
             $message .= '<a href="' . get_permalink() .'" class="event-wrapper" itemscope itemtype="https://schema.org/Event">';
             $message .= '<div class="date-time-block">';
@@ -189,6 +191,6 @@
         return $message;
         } 
         // register shortcode
-        //add_shortcode('agenda', 'agenda_current_shortcode'); 
+        add_shortcode('agenda', 'agenda_current_shortcode'); 
 ?>
 

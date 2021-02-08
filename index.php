@@ -16,12 +16,15 @@
                 <!-- One -->
                 <section id="one">
                     
-                    <?php //the_post_thumbnail(); ?>
+                    <?php ?>
                         <div class="inner">	
                             <header class="major">
                                 <h1><?php the_title()?></h1>
                             </header>
-                            <?php the_content()?>
+                            <div class="content">
+                                <?php the_content()?>
+                            </div>
+                            
                         </div>
                     
                 </section>

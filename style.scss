@@ -19,6 +19,8 @@ $color-t: white;
 
 $font-h: 'Sacramento', cursive;
 $font-p: 'Lato', sans-serif;
+
+$p-font-size: 1.4rem; 
 $height-unit: 6rem;
 
 .clearfix:after {
@@ -55,43 +57,29 @@ a{
 
 h1{
 	font-family: $font-h;
-    font-size: 3.5em;
+    font-size: 3.5rem;
 }
 h2{
-    font-size: 2em;
+    font-size: 2rem;
+}
+p{
+    font-size: $p-font-size;
+    font-weight: 300;
+    line-height: 2rem;
+    padding-bottom: 1rem;
 }
 
-#main{
-    .agenda-title{
-        display: inline;
-        float: left;
-    }
-    .archive-link{
-        font-size: 1.5em;
-        font-weight: 300;
-        float: right;
-    }
-
-    .event-wrapper{
-        font-size: 1.2em;
-        font-weight: 300;
-        line-height: 1.5em;
-        padding-bottom: 1em;
-        display: block;
-        .date-time-block{
-            display: inline-block;
-            padding-right: 1rem;
-        }
-        .title-location-block{
-            .event-title{
-                font-weight: 400;
-            }
-            display: inline-block;
-        }
+#contact{
+    margin: 2rem 7vw;
+    //margin-left: 7vw;
+    //margin-right: 7vw;
+    max-width: 132rem;
+    font-size: $p-font-size;
+    font-weight: 300;
+    p{
+        padding-bottom: unset;
     }
 }
-
-
 
 
 

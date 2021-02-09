@@ -5,17 +5,29 @@
     max-width: 22*$height-unit;
 
     header{
-        margin-bottom: 1em;
-        h1{
-            //underline
-        }
+        margin-bottom: 2rem;
+        
+    }
+
+    h2{
+        font-size: 2rem;
+        padding-bottom: 0.7rem;
+        line-height: 90%;
+    }
+    h2:after{
+        content: '';
+        background-color: white;
+        display: block;
+        height: 2px;
+        width: 100%;
+        margin: 0.5em 0 0 0;
     }
 
     p{
-        font-size: 1.2em;
+        font-size: $p-font-size;
         font-weight: 300;
-        line-height: 1.5em;
-        padding-bottom: 1em;
+        line-height: 2rem;
+        padding-bottom: 1rem;
         max-width: 15*$height-unit;
     }
     .wp-block-column{
@@ -23,5 +35,37 @@
     }
     img{
         height: auto;
+    }
+
+    .agenda-title{
+        display: inline-block;
+        //float: left;
+    }
+    .archive-link{
+        font-size: 1.5rem;
+        font-weight: 300;
+        float: right;
+    }
+
+    .event-wrapper{
+        font-size: $p-font-size;
+        font-weight: 300;
+        //line-height: 1.5rem;
+        padding-bottom: 1rem;
+        display: block;
+        .date-time-block{
+            display: inline-block;
+            padding-right: 2rem;
+        }
+        .title-location-block{
+            vertical-align: top;
+            .event-title{
+                font-weight: 400;
+            }
+            display: inline-block;
+        }
+        .content{
+            margin-top: 2rem;
+        }
     }
 }

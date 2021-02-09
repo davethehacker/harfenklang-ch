@@ -47,38 +47,28 @@ a {
 
 h1 {
   font-family: "Sacramento", cursive;
-  font-size: 3.5em;
+  font-size: 3.5rem;
 }
 
 h2 {
-  font-size: 2em;
+  font-size: 2rem;
 }
 
-#main .agenda-title {
-  display: inline;
-  float: left;
-}
-#main .archive-link {
-  font-size: 1.5em;
+p {
+  font-size: 1.4rem;
   font-weight: 300;
-  float: right;
+  line-height: 2rem;
+  padding-bottom: 1rem;
 }
-#main .event-wrapper {
-  font-size: 1.2em;
+
+#contact {
+  margin: 2rem 7vw;
+  max-width: 132rem;
+  font-size: 1.4rem;
   font-weight: 300;
-  line-height: 1.5em;
-  padding-bottom: 1em;
-  display: block;
 }
-#main .event-wrapper .date-time-block {
-  display: inline-block;
-  padding-right: 1rem;
-}
-#main .event-wrapper .title-location-block {
-  display: inline-block;
-}
-#main .event-wrapper .title-location-block .event-title {
-  font-weight: 400;
+#contact p {
+  padding-bottom: unset;
 }
 
 #header {
@@ -333,13 +323,26 @@ h2 {
   max-width: 132rem;
 }
 #main header {
-  margin-bottom: 1em;
+  margin-bottom: 2rem;
+}
+#main h2 {
+  font-size: 2rem;
+  padding-bottom: 0.7rem;
+  line-height: 90%;
+}
+#main h2:after {
+  content: "";
+  background-color: white;
+  display: block;
+  height: 2px;
+  width: 100%;
+  margin: 0.5em 0 0 0;
 }
 #main p {
-  font-size: 1.2em;
+  font-size: 1.4rem;
   font-weight: 300;
-  line-height: 1.5em;
-  padding-bottom: 1em;
+  line-height: 2rem;
+  padding-bottom: 1rem;
   max-width: 90rem;
 }
 #main .wp-block-column {
@@ -347,6 +350,34 @@ h2 {
 }
 #main img {
   height: auto;
+}
+#main .agenda-title {
+  display: inline-block;
+}
+#main .archive-link {
+  font-size: 1.5rem;
+  font-weight: 300;
+  float: right;
+}
+#main .event-wrapper {
+  font-size: 1.4rem;
+  font-weight: 300;
+  padding-bottom: 1rem;
+  display: block;
+}
+#main .event-wrapper .date-time-block {
+  display: inline-block;
+  padding-right: 2rem;
+}
+#main .event-wrapper .title-location-block {
+  vertical-align: top;
+  display: inline-block;
+}
+#main .event-wrapper .title-location-block .event-title {
+  font-weight: 400;
+}
+#main .event-wrapper .content {
+  margin-top: 2rem;
 }
 
 /* Tiles */

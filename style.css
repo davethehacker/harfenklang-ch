@@ -348,8 +348,22 @@ p {
 #main .wp-block-column {
   max-width: 90rem;
 }
+@media (min-width: 782px) {
+  #main .wp-block-lazyblock-two-columns:nth-child(even) .text {
+    order: 2;
+    margin-left: 2em;
+  }
+  #main .wp-block-lazyblock-two-columns:nth-child(even) .media {
+    order: 1;
+    margin-left: 0;
+  }
+}
 #main img {
   height: auto;
+}
+#main .wp-block-embed iframe {
+  max-width: 100%;
+  width: 50%;
 }
 #main .agenda-title {
   display: inline-block;

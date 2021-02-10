@@ -192,5 +192,118 @@
         } 
         // register shortcode
         add_shortcode('agenda', 'agenda_current_shortcode'); 
+
+
+
+
+        //import custom block
+        if ( function_exists( 'lazyblocks' ) ) :
+
+            lazyblocks()->add_block( array(
+                'id' => 136,
+                'title' => '->Spalten Layout',
+                'icon' => '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M13 12h7v1.5h-7zm0-2.5h7V11h-7zm0 5h7V16h-7zM21 4H3c-1.1 0-2 .9-2 2v13c0 1.1.9 2 2 2h18c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 15h-9V6h9v13z" /></svg>',
+                'keywords' => array(
+                ),
+                'slug' => 'lazyblock/two-columns',
+                'description' => '',
+                'category' => 'design',
+                'category_label' => 'design',
+                'supports' => array(
+                    'customClassName' => true,
+                    'anchor' => false,
+                    'align' => array(
+                        0 => 'wide',
+                        1 => 'full',
+                    ),
+                    'html' => false,
+                    'multiple' => true,
+                    'inserter' => true,
+                ),
+                'ghostkit' => array(
+                    'supports' => array(
+                        'spacings' => false,
+                        'display' => false,
+                        'scrollReveal' => false,
+                        'frame' => false,
+                        'customCSS' => false,
+                    ),
+                ),
+                'controls' => array(
+                    'control_96b9674767' => array(
+                        'type' => 'text',
+                        'name' => 'title',
+                        'default' => '',
+                        'label' => 'Titel',
+                        'help' => '',
+                        'child_of' => '',
+                        'placement' => 'content',
+                        'width' => '75',
+                        'hide_if_not_selected' => 'false',
+                        'save_in_meta' => 'false',
+                        'save_in_meta_name' => '',
+                        'required' => 'false',
+                        'placeholder' => '',
+                        'characters_limit' => '',
+                    ),
+                    'control_cd68e34057' => array(
+                        'type' => 'rich_text',
+                        'name' => 'text',
+                        'default' => '',
+                        'label' => 'Text',
+                        'help' => '',
+                        'child_of' => '',
+                        'placement' => 'content',
+                        'width' => '50',
+                        'hide_if_not_selected' => 'false',
+                        'save_in_meta' => 'false',
+                        'save_in_meta_name' => '',
+                        'required' => 'false',
+                        'multiline' => 'false',
+                        'placeholder' => '',
+                        'characters_limit' => '',
+                    ),
+                    'control_5e4bd64578' => array(
+                        'type' => 'inner_blocks',
+                        'name' => 'sidebar',
+                        'default' => '',
+                        'label' => 'Medien',
+                        'help' => '',
+                        'child_of' => '',
+                        'placement' => 'content',
+                        'width' => '50',
+                        'hide_if_not_selected' => 'false',
+                        'save_in_meta' => 'false',
+                        'save_in_meta_name' => '',
+                        'required' => 'false',
+                        'placeholder' => '',
+                        'characters_limit' => '',
+                    ),
+                ),
+                'code' => array(
+                    'output_method' => 'html',
+                    'editor_html' => '',
+                    'editor_callback' => '',
+                    'editor_css' => '',
+                    'frontend_html' => '<div class="wp-block-columns">
+                <div class="text wp-block-column" style="flex-basis:50%">
+                    <h2>{{title}}</h2>
+                    <p>{{{text}}}</p>
+                </div>
+                <div class="media wp-block-column" style="flex-basis:50%">
+                    {{{sidebar}}}
+                </div>
+                
+            </div>',
+                    'frontend_callback' => '',
+                    'frontend_css' => '',
+                    'show_preview' => 'selected',
+                    'single_output' => true,
+                ),
+                'condition' => array(
+                ),
+            ) );
+            
+        endif;
 ?>
 

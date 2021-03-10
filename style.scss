@@ -81,6 +81,13 @@ p{
     }
 }
 
+// shop module
+tr *, tbody tr.ec_cartitem_row, .ec_product_li *, .ec_product_page_sort > .ec_product_page_showing, .ec_product_page .ec_product_title_type1, .ec_product_page_sort .ec_product_page_perpage, .ec_product_title_type1 > a, .ec_cart_page .ec_cart_breadcrumb.ec_inactive, section.ec_cart_page * {
+    background-color: transparent!important;
+    color: white!important;
+    font-weight: unset;
+}
+
 
 
 @import 'header';

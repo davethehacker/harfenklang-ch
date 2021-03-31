@@ -6,7 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" charset="utf-8">
 
     <link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>" media="screen" />
-
+    
+    <link rel="stylesheet" type="text/css" href="<?php echo get_template_directory_uri(); ?>/slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="<?php echo get_template_directory_uri(); ?>/slick/slick-theme.css"/>
 
     <?php wp_head(); ?>
 </head>

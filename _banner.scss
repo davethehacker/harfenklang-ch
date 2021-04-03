@@ -1,15 +1,14 @@
-///
-/// Forty by Pixelarity
-/// pixelarity.com | hello@pixelarity.com
-/// License: pixelarity.com/license
-///
-
 /* Banner */
 
-	#banner {
+	#banner{
 		height: 11*$height-unit;
 		max-height: 70vh;
 		margin-top: $height-unit;
+
+	}
+	#banner-elem {
+		height: 11*$height-unit;
+		max-height: 70vh;
 		width: 100%;
 		align-items: center;
 		//background-attachment: fixed;
@@ -19,17 +18,14 @@
 		background-repeat: no-repeat;
 		background-size: cover;
 
-		.inner{
-			//padding-top: 4*$height-unit;
+
+		h1{
 			padding-top: 18vh;
 			padding-left: 1*$height-unit;
-			//padding-left: 10vw;
-			h1{
 			font-size: 2.6em;
 			max-width: 60vw;
 			
 			transform: rotate(-15deg);
-			}
 		}
 
 		/*@include vendor('align-items', 'center');

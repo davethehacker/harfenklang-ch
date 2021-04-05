@@ -3,7 +3,7 @@
                 <h1>Kontakt</h1>
                 <p>Eliane Koradi</p>
                 <p>Chliacherweg 1</p>
-                <p>CH-5623</p>
+                <p>CH-5623 Boswil</p>
                 <p>+41 56 221 26 60</p>
                 <p>info at harfenklang.ch</p>
 
@@ -28,7 +28,9 @@
                                 $(document).ready(function(){
                                 $('#banner').slick({
                                         autoplay: true,
-                                        arrows: false
+                                        arrows: false,
+                                        lazyLoad: 'progressive',
+                                        cssEase: 'ease',
                                 });
                                 });
                         </script>

@@ -48,7 +48,7 @@
             'label'                 => 'Termin',
             'description'           => 'Agenda für Konzerte und andere Events',
             'labels'                => $labels,
-            'supports'              => array( 'title', 'editor', 'revisions' ),
+            'supports'              => array( 'title', 'editor', 'revisions', 'thumbnail' ),
             'hierarchical'          => false,
             'public'                => true,
             'show_ui'               => true,

@@ -22,7 +22,9 @@
         width: 100%;
         margin: 0.5em 0 0 0;
     }
-
+    a:hover{
+        color: $color-h;
+    }
     p{
         font-size: $p-font-size;
         font-weight: 300;

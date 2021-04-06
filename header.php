@@ -21,7 +21,8 @@
 
     <!-- Header -->
         <header id="header">
-            <a href="/" class="logo"><img src="<?php echo(get_template_directory_uri())?>/Unterschrift-Eliane-Koradi-temp-white.png"></img></a>
+            <a href="/" class="logo monogramm"><img src="<?php echo(get_template_directory_uri())?>/Monogramm.png"></img></a>
+            <a href="/" class="logo"><img src="<?php echo(get_template_directory_uri())?>/Eliane-Irene-Koradi.png"></img></a>
             <nav>
                 <a href="#menu"></a>
             </nav>

@@ -94,10 +94,15 @@ tr *, tbody tr.ec_cartitem_row, .ec_product_li *, .ec_product_page_sort > .ec_pr
   width: 100%;
   z-index: 10000;
 }
-#header > a > img {
+#header > .logo > img {
   margin-top: 1rem;
   margin-bottom: auto;
   margin-left: 1rem;
+  max-height: 4.8rem;
+  max-width: 70vw;
+}
+#header .monogramm > img {
+  padding-bottom: 10px;
 }
 #header nav {
   display: flex;

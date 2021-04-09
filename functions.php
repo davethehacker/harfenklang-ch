@@ -12,10 +12,10 @@
        }
        add_action ('init', 'register_my_menus');
 
-    // Register Custom Post Type
+    // Register Agenda Post Type
     function register_agenda_post_type() {
 
-        $labels = array(
+        $labelsA = array(
             'name'                  => 'Termine',
             'singular_name'         => 'Termin',
             'menu_name'             => 'Agenda',
@@ -44,10 +44,10 @@
             'items_list_navigation' => 'Items list navigation',
             'filter_items_list'     => 'Filter items list',
         );
-        $args = array(
+        $argsA = array(
             'label'                 => 'Termin',
             'description'           => 'Agenda für Konzerte und andere Events',
-            'labels'                => $labels,
+            'labels'                => $labelsA,
             'supports'              => array( 'title', 'editor', 'revisions', 'thumbnail' ),
             'hierarchical'          => false,
             'public'                => true,
@@ -63,10 +63,69 @@
             'publicly_queryable'    => true,
             'capability_type'       => 'page',
         );
-        register_post_type( 'agenda', $args );
+        register_post_type( 'agenda', $argsA);
 
     }
     add_action( 'init', 'register_agenda_post_type', 0 );
+
+    
+    // Register Porjects Post Type
+    function register_projects_post_type() {
+
+        $labelsP = array(
+            'name'                  => 'Projekte',
+            'singular_name'         => 'Projekt',
+            'menu_name'             => 'Projekte',
+            'name_admin_bar'        => 'Projekte',
+            'archives'              => 'Projekte',
+            'attributes'            => 'Attribute',
+            'parent_item_colon'     => 'Übergeordnetes Element',
+            'all_items'             => 'alle Projekte',
+            'add_new_item'          => 'neues Projekt hinzufügen',
+            'add_new'               => 'neu Hinzufügen',
+            'new_item'              => 'neues Projekt',
+            'edit_item'             => 'Projekt bearbeiten',
+            'update_item'           => 'Projekt aktualisieren',
+            'view_item'             => 'Projekt ansehen',
+            'view_items'            => 'Projekte ansehen',
+            'search_items'          => 'Projekte suchen',
+            'not_found'             => 'nicht gefunden',
+            'not_found_in_trash'    => 'im Papierkorb nicht gefunden',
+            'featured_image'        => 'Featured Image',
+            'set_featured_image'    => 'Set featured image',
+            'remove_featured_image' => 'Remove featured image',
+            'use_featured_image'    => 'Use as featured image',
+            'insert_into_item'      => 'Insert into item',
+            'uploaded_to_this_item' => 'Uploaded to this item',
+            'items_list'            => 'Items list',
+            'items_list_navigation' => 'Items list navigation',
+            'filter_items_list'     => 'Filter items list',
+        );
+        $argsP = array(
+            'label'                 => 'Projekt',
+            'description'           => 'Projekte',
+            'labels'                => $labelsP,
+            'supports'              => array( 'title', 'editor', 'revisions', 'thumbnail', 'editor' ),
+            'hierarchical'          => false,
+            'public'                => true,
+            'show_ui'               => true,
+            'show_in_menu'          => true,
+            'menu_position'         => 6,
+            'menu_icon'             => 'dashicons-portfolio',
+            'show_in_admin_bar'     => true,
+            'show_in_nav_menus'     => true,
+            'can_export'            => true,
+            'has_archive'           => true,
+            'exclude_from_search'   => false,
+            'publicly_queryable'    => true,
+            'capability_type'       => 'page',
+            'show_in_rest'          => true,
+        );
+        register_post_type( 'projects', $argsP );
+
+    }
+    add_action( 'init', 'register_projects_post_type', 0 );
+    
 
 
     // ************* Remove default Posts type since no blog *************
@@ -133,9 +192,9 @@
          
         // Output needs to be return
         return $message;
-        } 
+    } 
         // register shortcode
-        add_shortcode('agenda_archive', 'agenda_archive_shortcode'); 
+    add_shortcode('agenda_archive', 'agenda_archive_shortcode'); 
 
 
     function agenda_current_shortcode() { 
@@ -187,12 +246,39 @@
         endif; 
         wp_reset_postdata(); 
             
-        // Output needs to be return
+        // Output needs to be returned
+        return $message;
+    } 
+    // register shortcode
+    add_shortcode('agenda', 'agenda_current_shortcode'); 
+
+
+    
+    function projects_shortcode() { 
+
+        $args = array(
+            'post_type' => 'projects',
+            'posts_per_page' => 100,
+            );
+        $custom_query = new WP_Query($args); 
+        $message = '<div class="project-covers">';
+        if ($custom_query->have_posts()) : while($custom_query->have_posts()) : $custom_query->the_post();
+            $postid = get_the_id();
+            $message .= '<a href="' . get_permalink() .'" class="project-cover">';
+            $message .= '<img src="' . get_field('cover-img') . '"></img>';
+            $message .= '<div class="project-title">' . get_the_title() . '</div>';
+            $message .= '</a>';
+        endwhile; else : 
+            return;
+        endif; 
+        wp_reset_postdata(); 
+        $message .= '</div>';
+        // Output needs to be returned
         return $message;
     } 
         // register shortcode
-        add_shortcode('agenda', 'agenda_current_shortcode'); 
-
+    add_shortcode('projects', 'projects_shortcode'); 
+    
 
 
 

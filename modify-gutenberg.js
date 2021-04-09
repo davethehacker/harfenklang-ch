@@ -1,4 +1,4 @@
-console.log( "I'm loaded!" );
+//console.log( "I'm loaded!" );
 wp.domReady( () => {
 	const { removeEditorPanel } = wp.data.dispatch('core/edit-post');
     console.log( "dom read" );

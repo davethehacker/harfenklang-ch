@@ -1,7 +1,6 @@
 //console.log( "I'm loaded!" );
 wp.domReady( () => {
 	const { removeEditorPanel } = wp.data.dispatch('core/edit-post');
-    console.log( "dom read" );
 	// Remove featured image panel from sidebar.
     removeEditorPanel( 'taxonomy-panel-category' ) ; // category
     removeEditorPanel( 'taxonomy-panel-TAXONOMY-NAME' ) ; // custom taxonomy

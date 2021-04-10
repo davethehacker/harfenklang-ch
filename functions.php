@@ -62,6 +62,7 @@
             'exclude_from_search'   => false,
             'publicly_queryable'    => true,
             'capability_type'       => 'page',
+            'show_in_rest'          => true,
         );
         register_post_type( 'agenda', $argsA);
 
@@ -105,7 +106,7 @@
             'label'                 => 'Projekt',
             'description'           => 'Projekte',
             'labels'                => $labelsP,
-            'supports'              => array( 'title', 'editor', 'revisions', 'thumbnail', 'editor' ),
+            'supports'              => array( 'title', 'editor', 'revisions', 'thumbnail'),
             'hierarchical'          => false,
             'public'                => true,
             'show_ui'               => true,

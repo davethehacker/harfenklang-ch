@@ -24,7 +24,7 @@
             ?>
                 <article>
                     <span class="image">
-                        <img src="<?php echo($thumbnail) ?>" alt="" />
+                        <img src="<?php echo($tileImg) ?>" alt="" />
                     </span>
                     <header class="major">
                         <h3><a href="<?php echo($url)?>" class="link"><?php echo($title)?></a></h3>

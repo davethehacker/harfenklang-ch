@@ -11,7 +11,9 @@
             $text = get_sub_field('text');
     ?>
             <div id="banner-elem" style="background-image: url(<?php echo $img;?>)">
-                <h1><?php echo $text;?></h1>
+                <div class="banner-text">
+                    <h1><?php echo $text;?></h1>
+                </div>
             </div>
     <?php
         // End loop.

@@ -1,10 +1,10 @@
         <!-- Contact -->
         <section id="contact">
                 <h1>Kontakt</h1>
-                <p>Eliane Koradi</p>
-                <p>Chliacherweg 1</p>
-                <p>CH-5623 Boswil</p>
-                <p>+41 56 221 26 60</p>
+                <p class ="name">Eliane Koradi</p>
+                <p class="street">Chliacherweg 1</p>
+                <p class="city">CH-5623 Boswil</p>
+                <p class="tel">+41 56 221 26 60</p>
                 <p>info at harfenklang.ch</p>
 
             </section>
@@ -31,6 +31,8 @@
                                         arrows: false,
                                         lazyLoad: 'progressive',
                                         cssEase: 'ease',
+                                        autoplaySpeed: '6000',
+                                        speed: '1200',
                                 });
                                 });
                         </script>

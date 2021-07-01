@@ -71,7 +71,7 @@ p{
 }
 
 #contact{
-    margin: 2rem 7vw;
+    margin: 6rem 7vw 2rem;
     //margin-left: 7vw;
     //margin-right: 7vw;
     max-width: 132rem;
@@ -79,7 +79,37 @@ p{
     font-weight: 300;
     p{
         padding-bottom: unset;
+        display: inline-block;
+        margin-left: 3rem;
     }
+    h1{
+        font-size: 2.5rem;
+        display: inline-block;
+    }
+    .street, .city{
+        display: none;
+    }
+
+}
+#contact::before {
+    content: "";
+    background-color: white;
+    display: block;
+    height: 2px;
+    width: 100%;
+    margin: 0.5em 0 0.5em 0;
+}
+.home #contact{
+    h1{
+        display: block;
+    }
+    p{
+        display: block;
+        margin-left: 0;
+    }
+}
+.home #contact::before{
+    display: none;
 }
 
 // shop module

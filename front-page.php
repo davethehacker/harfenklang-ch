@@ -18,7 +18,7 @@
                     $id = $tile->object_id;
                     $url = $tile->url;
                     $title = $tile->title;
-                    $thumbnail = get_the_post_thumbnail_url($id,'large');
+                    //not used anymore $thumbnail = get_the_post_thumbnail_url($id,'large');
                     $tileImg = get_field('frontpage-tile-img', $id);
                     $color = get_field('frontpage-tile-color', $id);
             ?>

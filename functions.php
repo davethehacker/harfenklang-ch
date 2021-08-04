@@ -160,7 +160,8 @@
         $args = array(
             'post_type' => 'agenda',
             'posts_per_page' => 100,
-            'orderby' => 'date',
+            'meta_key'			=> 'date',
+	        'orderby'			=> 'meta_value',
             'order' => 'ASC',
             'post_status' => 'archive'
            );
@@ -203,7 +204,8 @@
         $args = array(
             'post_type' => 'agenda',
             'posts_per_page' => 100,
-            'orderby' => 'date',
+            'meta_key'			=> 'date',
+	        'orderby'			=> 'meta_value',
             'order' => 'ASC',
             'post_status' => 'published'
             );

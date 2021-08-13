@@ -55,7 +55,7 @@ h2 {
 }
 
 p {
-  font-size: 1.4rem;
+  font-size: 1.2rem;
   font-weight: 300;
   line-height: 2rem;
   padding-bottom: 1rem;
@@ -64,7 +64,7 @@ p {
 #contact {
   margin: 6rem 7vw 2rem;
   max-width: 132rem;
-  font-size: 1.4rem;
+  font-size: 1.2rem;
   font-weight: 300;
 }
 #contact p {
@@ -250,7 +250,7 @@ tr *, tbody tr.ec_cartitem_row, .ec_product_li *, .ec_product_page_sort > .ec_pr
   color: #dcbcc4;
 }
 #main p {
-  font-size: 1.4rem;
+  font-size: 1.2rem;
   font-weight: 300;
   line-height: 2rem;
   padding-bottom: 1rem;
@@ -285,7 +285,7 @@ tr *, tbody tr.ec_cartitem_row, .ec_product_li *, .ec_product_page_sort > .ec_pr
   float: right;
 }
 #main .event-wrapper {
-  font-size: 1.4rem;
+  font-size: 1.2rem;
   font-weight: 300;
   padding-bottom: 1rem;
   display: block;

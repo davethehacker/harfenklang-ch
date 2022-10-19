@@ -297,6 +297,7 @@ tr *, tbody tr.ec_cartitem_row, .ec_product_li *, .ec_product_page_sort > .ec_pr
 #main .event-wrapper .title-location-block {
   vertical-align: top;
   display: inline-block;
+  width: 30rem;
 }
 #main .event-wrapper .title-location-block .event-title {
   font-weight: 400;

@@ -1,4 +1,5 @@
 <?php get_header(); ?>
+<?php $defaultImg = 'https://harfenklang.ch/wp-content/uploads/2022/09/Eliane-Koradi-IMG_0024_Eliane_sRGB.jpg' ?>
 <?php include 'banner.php'; ?>
     <!-- Main -->
     <div id="main" class="alt">

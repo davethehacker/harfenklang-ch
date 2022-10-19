@@ -21,10 +21,10 @@
 
     // No value.
     else :
-        if(get_the_post_thumbnail_url() != ''):
-            $img = get_the_post_thumbnail_url();
+        if(get_field('cover-img') != ''):
+            $img = get_field('cover-img');
         else:
-            $img = 'https://harfenklang.hexcode.ch/wp-content/uploads/2021/01/Eliane-Koradi-IMG_0049_Eliane_sRGB.jpg';
+            $img = $defaultImg;
         endif;
     ?>
         <div id="banner-elem" style="background-image: url(<?php echo $img;?>)">

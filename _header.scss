@@ -15,17 +15,10 @@
     width: 100%;
 	z-index: 10000;
 
-	&>.logo > img{
+	&>a > img{
 		margin-top: 1rem;
 		margin-bottom: auto;
 		margin-left: 1rem;
-		max-height: 0.8*$height-unit;
-		max-width: 57vw;
-		vertical-align: bottom;
-	}
-	.monogramm > img{
-		padding-bottom: 10px;
-		max-width: calc(9vw + 10px);
 	}
 
 

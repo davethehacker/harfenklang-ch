@@ -1,5 +1,5 @@
-
 <?php get_header(); ?>
+<?php $defaultImg = 'https://harfenklang.ch/wp-content/uploads/2020/11/Eliane-Koradi-IMG_0040_Eliane_sRGB.jpg' ?>
 
         <?php if(have_posts()): while(have_posts()): the_post(); ?>
         <?php include 'banner.php'; ?>

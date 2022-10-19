@@ -1,4 +1,5 @@
 <section id="banner">
+<?php $defaultImg = 'https://harfenklang.ch/wp-content/uploads/2020/11/Eliane-Koradi-IMG_0040_Eliane_sRGB.jpg' ?>
     <?php
     // Check rows exists.
     if( have_rows('banners') ):

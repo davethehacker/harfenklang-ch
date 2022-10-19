@@ -15,7 +15,7 @@
 
 <body <?php body_class(); ?> class="is-preload" id="main-body">
     <?php wp_body_open(); ?>
-    
+    <?php $defaultImg = 'https://harfenklang.ch/wp-content/uploads/2020/11/Eliane-Koradi-IMG_0040_Eliane_sRGB.jpg' ?>
     <!-- Wrapper -->
     <div id="wrapper">
 

@@ -9,6 +9,9 @@
 
             // Load sub field value.
             $img = get_sub_field('img');
+			if($img == ''):
+				$img = $defaultImg;
+			endif;
             $text = get_sub_field('text');
     ?>
             <div id="banner-elem" style="background-image: url(<?php echo $img;?>)">

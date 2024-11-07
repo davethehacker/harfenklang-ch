@@ -128,6 +128,7 @@ tr *, tbody tr.ec_cartitem_row, .ec_product_li *, .ec_product_page_sort > .ec_pr
   margin-top: 1rem;
   margin-bottom: auto;
   margin-left: 1rem;
+  max-height: 80%;
 }
 #header nav {
   display: flex;
@@ -342,11 +343,20 @@ tr *, tbody tr.ec_cartitem_row, .ec_product_li *, .ec_product_page_sort > .ec_pr
   			}
   		} */
 }
-#banner .inner {
+#banner .slick-list {
+  height: 100%;
+}
+#banner .slick-track {
+  height: 100%;
+}
+#banner .banner-text {
+  height: 100%;
+}
+#banner .inner, #banner .banner-text {
   padding-top: 18vh;
   padding-left: 6rem;
 }
-#banner .inner h1 {
+#banner .inner h1, #banner .banner-text h1 {
   font-size: 2.6em;
   max-width: 60vw;
   transform: rotate(-15deg);

@@ -6,15 +6,15 @@
                 <p class="city">CH-5623 Boswil</p>
                 <p class="tel">+41 56 221 26 60</p>
                 <p>info at harfenklang.ch</p>
-
-            </section>
-
+        </section>
+        <section id="link-newsletter">
+                
+        </section>
 
     </div>
 
 
     <?php wp_footer(); ?>
-    <!-- Scripts -->
 			<script src="<?php echo get_template_directory_uri(); ?>/assets/js/jquery.min.js"></script>
 			<!--<script src="<?php echo get_template_directory_uri(); ?>/assets/js/jquery.scrolly.min.js"></script>-->
 			<!--<script src="<?php echo get_template_directory_uri(); ?>/assets/js/jquery.scrollex.min.js"></script>-->

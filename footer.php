@@ -8,7 +8,7 @@
                 <p>info at harfenklang.ch</p>
         </section>
         <section id="link-newsletter">
-                
+                <a href=""></a>Newsletter</a>
         </section>
 
     </div>

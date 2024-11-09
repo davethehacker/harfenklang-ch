@@ -6,9 +6,7 @@
                 <p class="city">CH-5623 Boswil</p>
                 <p class="tel">+41 56 221 26 60</p>
                 <p>info at harfenklang.ch</p>
-        </section>
-        <section id="link-newsletter">
-                
+                <a href="https://harfenklang.ch/newsletter-anmeldung/">Newsletter</a>
         </section>
 
     </div>

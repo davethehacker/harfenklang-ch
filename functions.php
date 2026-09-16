@@ -162,7 +162,7 @@
             'posts_per_page' => 100,
             'meta_key'			=> 'date',
 	        'orderby'			=> 'meta_value',
-            'order' => 'DSC',
+            'order' => 'DESC',
             'post_status' => 'archive'
            );
         $custom_query = new WP_Query($args); 
@@ -175,7 +175,8 @@
             $message .= '<a href="' . get_permalink() .'" class="event-wrapper">';
             $message .= '<div class="date-time-block">';
             $message .= '<div class="event-date">';
-            $message .= $date->format('d.m.Y');
+            // Display the formatted date only when it could be parsed.
+            $message .= ( $date instanceof DateTime ) ? $date->format('d.m.Y') : '';
             $message .= '</div>';
             $message .= '<div class="event-time">' . get_field('time') . '</div>';
             $message .= '</div>';
@@ -219,8 +220,8 @@
             // Create DateTime object from value (formats must match).
             $date = DateTime::createFromFormat('Ymd', $date_string);
 
-            // error here, everything gets archived
-            if(date('Ymd', time()) > $date_string){
+            // Only auto-archive when the date is valid and in the past.
+            if( $date instanceof DateTime && date('Ymd', time()) > $date_string){
                 wp_update_post(array(
                     'ID'    =>  $postid,
                     'post_status'   =>  'archive'
@@ -231,8 +232,12 @@
 
             $message .= '<a href="' . get_permalink() .'" class="event-wrapper" itemscope itemtype="https://schema.org/Event">';
             $message .= '<div class="date-time-block">';
-            $message .= '<div class="event-date" itemprop="startDate" content="' . $date->format('Y-m-d') . 'T'. get_field('time') . '">';
-            $message .= $date->format('d.m.Y');
+            if ( $date instanceof DateTime ) {
+                $message .= '<div class="event-date" itemprop="startDate" content="' . $date->format('Y-m-d') . 'T'. get_field('time') . '">';
+                $message .= $date->format('d.m.Y');
+            } else {
+                $message .= '<div class="event-date">';
+            }
             $message .= '</div>';
             $message .= '<div class="event-time">' . get_field('time') . '</div>';
             $message .= '</div>';
